@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  const URLS = "https://ig-2.onrender.com"
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate()
@@ -14,7 +15,7 @@ export default function Login() {
 useEffect(()=>{
     document.title = "Login - Instagram";
     const getData = async()=>{
-        const ur = `http://localhost:3000/login/data/fetch`
+        const ur = `${URLS}/login/data/fetch`
         console.log(ur)
        const axiosGet = await axios.get(ur)
         console.log(axiosGet.data.UserLogin)
@@ -28,7 +29,7 @@ useEffect(()=>{
     event.preventDefault();
    const form ={email:emailAddress,password}
 try{
-    const response = axios.post(`http://localhost:3000/login/`,  form)
+    const response = axios.post(`${URLS}/login/`,  form)
 console.log((await response).config.data)
    
 } 
