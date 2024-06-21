@@ -49,12 +49,12 @@ catch(err){
 
 
   return (
-    <div className="container flex px-5 md:mx-auto max-w-screen-md items-center h-screen">
-      <div className="flex md:w-2/4 w-0">
+    <div className="container flex px-5 flex-col md:flex-row  md:mx-auto max-w-screen-md items-center h-screen">
+      <div className="flex md:w-2/4 w-20 ">
         <img
-          src="/iphone-with-profile.jpg"
+          src="/banners.png"
           alt="iPhone with Instagram"
-        />
+        className="md:w-[200px] my-3"/>
       </div>
       <div className="flex flex-col md:w-2/4 w-full max-w-md">
         <div className="flex flex-col items-center bg-white py-20 px-6 border border-gray-primary mb-4 rounded">

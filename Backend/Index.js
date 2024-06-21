@@ -2,11 +2,12 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const dotenv = require("dotenv")
-dotenv.config({path:path.join(__dirname,"config",'.env')});
 const login = require("./Routes/login");
 const DB = require("./models/DB_Connection");
 const cors = require('cors');
 const corsOptions = require("./Middleware/Cors");
+
+dotenv.config({path:path.join(__dirname,"config",'.env')});
 
 //Db connections
 DB()
