@@ -30,7 +30,6 @@ useEffect(()=>{
    const form ={email:emailAddress,password}
 try{
     const response = axios.post(`${URLS}/login/`,  form)
-console.log((await response).config.data)
    
 } 
 catch(err){
